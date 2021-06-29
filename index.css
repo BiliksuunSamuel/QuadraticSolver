@@ -1,0 +1,167 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-size: 1rem;
+  font-family: bahnschrift;
+  height: 100vh;
+  width: 100vw;
+  display: inline-flex;
+  flex-direction: column;
+  background: #0063b1;
+}
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 250px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px 1px black;
+  overflow: hidden;
+}
+.form {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px ridge lightgray;
+  width: 100%;
+  border-radius: 10px;
+}
+.inputs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 5px 25px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+input {
+  width: 30px;
+  flex: 1;
+  margin-right: 5px;
+  height: 50px;
+  text-align: center;
+  border-radius: 20px;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  outline: none;
+}
+.buttons {
+  margin-top: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.button {
+  padding: 10px;
+  border-style: none;
+  font-weight: bold;
+  width: 100px;
+  border-radius: 30px;
+  box-shadow: 0 1px 1px 1px #3b5999;
+  transition: all 0.35s ease-in-out;
+  cursor: pointer;
+  color: #ffffff;
+}
+.answer {
+  background: #0063b1;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-name: answer;
+}
+.new {
+  background: coral;
+}
+.button:hover {
+  transform: scale(1.1);
+}
+.results {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+@keyframes answer {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .results {
+    padding: 5px;
+    overflow: hidden;
+    white-space: pre-wrap;
+    width: 100%;
+    overflow: scroll;
+  }
+  .inputs {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    padding: 5px;
+  }
+  .buttons {
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+  }
+  .button {
+    width: 90%;
+    align-self: center;
+    justify-self: center;
+  }
+  .container {
+    height: 80vh;
+    border-radius: 25px;
+    padding: 5px;
+  }
+  input {
+    width: 70%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  .display {
+    width: 70%;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .form {
+    padding: 5px;
+  }
+}
+@media screen and (max-width: 569px) {
+  .container {
+    width: 80%;
+  }
+}
